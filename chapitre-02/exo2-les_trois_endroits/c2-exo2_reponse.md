@@ -11,7 +11,7 @@ Changes not staged for commit:
   (use "git restore <file>..." to discard changes in working directory)
         modified:   exo1-le_depot_d_essai/fichier1.txt
 
-no changes added to commit (use "git add" and/or "git commit -a")
+
 
 # apres avoir lancer la commande "git add ." le resultat obtenu est:
 
