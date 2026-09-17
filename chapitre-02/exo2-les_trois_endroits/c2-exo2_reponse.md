@@ -15,7 +15,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 # apres avoir lancer la commande "git add ." le resultat obtenu est:
 
-PS C:\Users\Russelle\Desktop\ani-2053\chapitre-02> git add .
+
 PS C:\Users\Russelle\Desktop\ani-2053\chapitre-02> git status
 On branch main
 Your branch is up to date with 'origin/main'.
