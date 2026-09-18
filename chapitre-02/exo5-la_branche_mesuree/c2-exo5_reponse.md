@@ -10,7 +10,7 @@ J'ai créé une nouvelle branche (appelee "branche3") puis réalisé trois commi
 # mesurons la taille que le depot a gagner dans le disque
 
 avant les commit la place occupee dans le disque etait de: 26.78 ko
-apres les commit la place occupee est de : 29.14 ko
+apres les commit la place occupee est de : 30.22 ko
 # toute ma demarche pour obtenir les explications precedentes
 
 PS C:\Users\Russelle\Desktop\dossier> git switch -c branche3                                              
@@ -48,6 +48,20 @@ Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/russelle09/dossier.git
    560c9e6..6e81c71  branche3 -> branche3
 branch 'branche3' set up to track 'origin/branche3'.
+PS C:\Users\Russelle\Desktop\dossier> git add main.cpp                                                    
+PS C:\Users\Russelle\Desktop\dossier> git commit -m "code qui calcule deux nombres entres par l'utilisateur"                     
+[branche3 bef527d] code qui calcule deux nombres entres par l'utilisateur
+ 1 file changed, 12 insertions(+)
+ create mode 100644 main.cpp
+PS C:\Users\Russelle\Desktop\dossier> git push --set-upstream origin branche3                             
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 467 bytes | 467.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/russelle09/dossier.git
+   6e81c71..bef527d  branche3 -> branche3
+branch 'branche3' set up to track 'origin/branche3'.
 PS C:\Users\Russelle\Desktop\dossier> "{0:N2} Ko" -f ((Get-ChildItem .git -Recurse -File | Measure-Object Length -Sum).Sum / 1KB)
-29.14 Ko
-PS C:\Users\Russelle\Desktop\dossier> 
+30.22 Ko
