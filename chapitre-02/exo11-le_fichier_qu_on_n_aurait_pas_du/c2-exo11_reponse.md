@@ -77,6 +77,33 @@ PS C:\Users\Russelle\Desktop\exo11c> (Get-ChildItem .git -Recurse -File | Measur
 
 # conclusion 
 
-en utilisant "Gish Bash" au depart la taille etait de .git etait de "27420Mo" apres avoir retirer le fichier et recompiler le poid est devenu "10517715".je constate que le poid a tellement augmanter. cependant, en utilisant "powershell" au depart le poids etait de "27421 Mo" et apres supression et recompilation, elle est devenu "74537Mo". les deux resultats sont totalement different et la difference est tres remarquable.
+en utilisant "Gish Bash" au depart la taille etait de .git etait de "27420 octets" soit 0.0262 Mo apres avoir retirer le fichier et faire de nouveau un commit le poid est devenu "10517715 octet" soit 10,03 Mo..je constate que le poid a tellement augmanter. cependant, en utilisant "powershell" au depart le poids etait de "27421 octet" soit 0.026 Mo et apres supression et refaire commit, elle est devenu "74537 octets" soit 0.071 Mo. les deux resultats sont totalement different et la difference est tres remarquable.
 
 la methode la plus approprie est celle avec git bash car il a cree un fichier contenant des donnee pas tres compressible. Supprimer gros.bin du répertoire de travail ne supprime donc pas automatiquement les données du premier commit.
+
+et a la question de savoir ce que contient un fichier de 10 Mo creer avec lengh.
+j'ai tapper la commande" [System.IO.File]::ReadAllBytes(".\gros.bin")[0..19]" pour afficher les 20 premier octets et j'ai obtenus: 
+
+
+PS C:\Users\Russelle\Desktop\exo11c> [System.IO.File]::ReadAllBytes(".\gros.bin")[0..19]
+0                    
+0            
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+je constate que comme le fichier etait nouveau il est rempli de zero et il est plus facile de compresser un fichier de zero .
