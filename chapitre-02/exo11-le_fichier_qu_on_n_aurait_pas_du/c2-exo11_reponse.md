@@ -1,4 +1,4 @@
-# pour cet exercice il etait question de compiler un fichier de 10Mo et ensuite le retirer et le compiler egalement puis, mesurer sa taille avant la premiere compilation et apres la seconde compilation et conclure. pour cela, j'ai utiliser "powershell" et "Git Bash" pour en etre sur les details se trouvent dans les lignes suivantes:
+# pour cet exercice il etait question de faire un commit sur un fichier de 10Mo et ensuite le retirer et faire un second commit egalement puis, mesurer sa taille avant le premier commit et apres le second commit et conclure. pour cela, j'ai utiliser "powershell" et "Git Bash" pour en etre sur les details se trouvent dans les lignes suivantes:
 
 # avec Git Bash
 j'ai utiliser la commande "head -c 10M /dev/urandom > gros.bin" pour creer un fichier de 10Mo
