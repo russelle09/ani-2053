@@ -126,4 +126,5 @@ f23be38 (HEAD -> main, autre) HEAD@{5}: revert: Revert "ajout du return a la fin
 720fc8d HEAD@{7}: commit: ajout du return a la fin du code
 483d559 HEAD@{8}: commit: ajout du return 0 a la fin du code
 76c1197 HEAD@{9}: commit: ajout du return 0 a la fin du code
-:
+PS C:\Users\Russelle\Desktop\exercice8> git reset --hard f5fbfc2
+HEAD is now at f5fbfc2 suppressin de logger j'avais suprimer la fonction logger mon programme
