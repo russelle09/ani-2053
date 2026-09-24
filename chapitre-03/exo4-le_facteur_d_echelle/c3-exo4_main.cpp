@@ -12,20 +12,15 @@ NKENTSEU_DEFINE_APP_DATA(([]() {
 int nkmain(const nkentseu::NkEntryState &state){ 
     nkentseu::NkWindowConfig cfg;
     cfg.title = "MK WINDOW";
-    cfg.width = 1600;
-    cfg.height= 950;
+    cfg.width = 160;
+    cfg.height= 90;
 
     cfg.minHeight = 50;
     cfg.minWidth = 100;
-
-    //cfg.minimizable = false;
-    //cfg.closable = true;
-    //cfg.resizable = true;
-    //cfg.maximizable = true;
    
-    nkentseu::NkWindow window;                      //nkentseu::NKWindow window(cfg)
-    if (!window.Create(cfg)){                     // if (!window.IsValid()){
-        logger.Error("Failed to create window"); // nkentseu::NKLogError("Failed to create window");
+    nkentseu::NkWindow window;                      
+    if (!window.Create(cfg)){                     
+        logger.Error("Failed to create window"); 
         return -1;
     }
 
@@ -33,9 +28,13 @@ int nkmain(const nkentseu::NkEntryState &state){
     auto displaySize = window.GetDisplaySize();
     auto scale = window.GetDpiScale();
 
-    logger.Info("Window size : {} x {}", size.x, size.y);
-   logger.Info("Display size : {} x {}", displaySize.x, displaySize.y);
-   logger.Info("DPI scale : {}", scale);
+   logger.Info("SIZE X = {}", size.x);
+   logger.Info("SIZE Y = {}", size.y);
+
+   logger.Info("DISPLAY X = {}", displaySize.x);
+   logger.Info("DISPLAY Y = {}", displaySize.y);
+
+   logger.Info("DPI SCALE = {}", scale);
 
     bool running = true ; 
     while (running){
@@ -49,3 +48,9 @@ int nkmain(const nkentseu::NkEntryState &state){
     }
     return 0;
     }
+
+
+     //cfg.minimizable = false;
+    //cfg.closable = true;
+    //cfg.resizable = true;
+    //cfg.maximizable = true;
