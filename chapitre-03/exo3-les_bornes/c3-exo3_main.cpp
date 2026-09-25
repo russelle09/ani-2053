@@ -1,6 +1,6 @@
 #include "NKWindow/NKMain.h"
 #include "NKWindow/NKWindow.h"
-//#include "NKEvent/NkWindowEvent.h"
+#include "NKEvent/NkWindowEvent.h"
 
 NKENTSEU_DEFINE_APP_DATA(([]() {
     nkentseu::NkAppData d{};
@@ -9,34 +9,57 @@ NKENTSEU_DEFINE_APP_DATA(([]() {
     return d;
 })());
 
-int nkmain(const nkentseu::NkEntryState &state){ 
+int nkmain(const nkentseu::NkEntryState &state)
+{
     nkentseu::NkWindowConfig cfg;
+
     cfg.title = "MK WINDOW";
-    cfg.width = 1600;
-    cfg.height= 950;
+    cfg.width = 176;
+    cfg.height = 73;
 
     cfg.minHeight = 50;
     cfg.minWidth = 100;
 
-    //cfg.minimizable = false;
-    //cfg.closable = true;
-    //cfg.resizable = true;
-    //cfg.maximizable = true;
-   
-    nkentseu::NkWindow window;                      //nkentseu::NKWindow window(cfg)
-    if (!window.Create(cfg)){                     // if (!window.IsValid()){
-        logger.Error("Failed to create window"); // nkentseu::NKLogError("Failed to create window");
+    cfg.resizable = true;
+
+    nkentseu::NkWindow window;
+
+    if (!window.Create(cfg))
+    {
+        logger.Error("Failed to create window");
         return -1;
     }
-    bool running = true ; 
-    while (running){
+
+    bool running = true;
+
+    // Taille de départ
+    auto lastSize = window.GetSize();
+
+    while (running)
+    {
         nkentseu::NkEvent* event = nullptr;
-        while((event = nkentseu::NkEvents().PollEvent()) !=nullptr){
-            // process events
-            if(event ->Is<nkentseu::NkWindowCloseEvent>()){
-                running=false;
-            } 
+
+        // Récupération des événements
+        while ((event = nkentseu::NkEvents().PollEvent()) != nullptr)
+        {
+            if (event->Is<nkentseu::NkWindowCloseEvent>())
+            {
+                running = false;
+            }
+        }
+
+        // Récupération de la taille actuelle
+        auto size = window.GetSize();
+
+        // Vérification d'un changement de taille
+        if (size.x != lastSize.x || size.y != lastSize.y)
+        {
+            logger.Info("Nouvelle taille : {} x {}", size.x, size.y);
+
+            // On mémorise la nouvelle taille
+            lastSize = size;
         }
     }
+
     return 0;
-    }
+}
