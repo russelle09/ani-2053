@@ -149,10 +149,10 @@ int nkmain(const nkentseu::NkEntryState &state)
 
      {
         nkentseu::NkWindowConfig cfg;
-        cfg.title = "Fenetre 6 - FULLSCREEN FALSE";
+        cfg.title = "Fenetre 6 - CENTERED FALSE";
         cfg.width = 800;
         cfg.height = 600;
-        cfg.fullscreen = false;
+        cfg.centered = false;
         
         nkentseu::NkWindow window;
 
@@ -176,10 +176,10 @@ int nkmain(const nkentseu::NkEntryState &state)
 
     {
         nkentseu::NkWindowConfig cfg;
-        cfg.title = "Fenetre 7 - vsync FALSE";
+        cfg.title = "Fenetre 7 - FRAME FALSE";
         cfg.width = 800;
         cfg.height = 600;
-        cfg.vsync = false;
+        cfg.frame = false;
 
         nkentseu::NkWindow window;
 
