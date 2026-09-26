@@ -48,9 +48,3 @@ int nkmain(const nkentseu::NkEntryState &state){
     }
     return 0;
     }
-
-
-     //cfg.minimizable = false;
-    //cfg.closable = true;
-    //cfg.resizable = true;
-    //cfg.maximizable = true;
