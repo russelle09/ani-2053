@@ -1,0 +1,6 @@
+# ce que la coquille fait a ma place: elle appelle automatiquement "onInit" et et gere la fenetre et la boucle de mon 
+application a ma place
+# ce qui se passe si je configure dans onInit: si je configure dans OnInit, certains parametres ne seront pas pris 
+en charge car elle est faite apres la creation de la fenetre.
+# ce qui se passe sans NkMain.h: sans NkMain.h, il n'y aura aucune information pour traiter "int nkmain" et le code 
+ne pourra plus compiler et generera par la suite des erreurs

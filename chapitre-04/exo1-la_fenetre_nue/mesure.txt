@@ -1,0 +1,1 @@
+lignes : 20, utiles : 18, fond : 100, 200,25
