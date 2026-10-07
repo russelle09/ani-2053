@@ -1,0 +1,6 @@
+# Ce que la coquille me donne :la coquille rend une  application déjà configurées, Une boucle de jeu ,la gestion des événements clavier.
+L'intervale de temps entre deux images
+# Ce qu'elle me prend :le systeme se charge de creer la fenetre a ma place, gere egalement le rendu et les evenements
+le temps , et l'affichage.
+Quand je choisirais la main :Je choisirais la main lorsque la coquille ne me permettra pas de faire exactement ce que je veux.
+
