@@ -1,0 +1,5 @@
+image : img1.jpg, calcul : 3499200, mesure : 25.8 , fichier : 125227
+image : Sans titre.gif, calcul : 2985984, mesure : 22.1 , fichier : 107566
+image : Sans titre.jpg, calcul : 2985984, mesure : 18.3 , fichier : 72165
+image : Capture d'écran 2026-09-28 174836.png, calcul : 84000, mesure : 27.1, fichier : 5027
+image : Capture d'écran 2026-10-06 133355.png, calcul : 5208, mesure : 28.6 , fichier : 172

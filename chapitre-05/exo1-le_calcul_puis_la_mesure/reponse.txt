@@ -1,0 +1,4 @@
+# ce que la taille du fichier ne dit pas : La taille du fichier c'est l’espace que l’image prend sur le disque.ce n'est pas la mémoire qu'ultilise l’image lorsqu'elle est chargée dans le programme. 
+# l'ecart entre calcul et mesure: le calcul nous donne une estimation de l'espace que cela occupera en memoire en se basant sur la largeur, 
+de la hauteur et le nombre d'octt par pixel. La mesure quant a elle c'est l’augmentation réelle de la mémoire du 
+processus après le chargement. Les difference entre ces deux valeurs est souvent du au fait que le programme utilise aussi de la mémoire pour ses objets, ses structures internes et d’autres ressources.
