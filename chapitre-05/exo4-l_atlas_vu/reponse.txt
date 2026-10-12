@@ -1,0 +1,13 @@
+Pourquoi une seule texture :
+
+Un atlas de police regroupe les glyphes, dans une seule texture. Au lieu de créer pour chaque caractère sa texture, le programme peut utiliser une seule image contenant tous les glyphes.
+Cela facilite le rendu du texte. Le programme peut ainsi afficher des mots et des phrases en sélectionnant l'atlas correspondant.
+
+Ce que change la taille : La taille de la police influence les dimensions des glyphes contenus dans l'atlas Lors d'une variation de taille, les caractères occupent généralement plus de pixels et la texture peut devenir plus grande.
+ comme notre atlas  qui a la police de taille 48 nécessite plus d’espace qu’un atlas ayant une taille de police egale a 18. 
+ Lorsqu'on charge le meme caractere le nombre de glyphes ne change pas, mais leur prend plus d'espace dans sa representation. 
+ Une texture plus grande peut donc consommer plus de mémoire graphique.
+
+À quoi sert la marge entre glyphes : La marge entre les glyphes permet d'eviter le melange de deux caractere visins en les séparant dans l’atlas.
+ Lorsqu’une texture est redimensionner, les pixels des caractères voisin peuvent être mélangés si les glyphes sont trop rapprochés.
+ donc la marge aide à conserver des contours propres et lisibles. 

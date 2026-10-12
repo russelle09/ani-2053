@@ -1,0 +1,3 @@
+Taille : 48,Glyphes : 191, Texture : 1024 x 1024 , perdu : 100 %
+
+Taille : 18, Glyphes : 191, Texture : 512 x 512, perdu : 100 %
